@@ -50,9 +50,9 @@ do
 	conf=${arr[4]}
 	for k in ${blocks}
 	do
-		mkdir -p ~/$pdb/$lig/output
-		path=~/$pdb/$lig
-		homeDirVar=~
+		mkdir -p /home/sraman4/projects/biosensor_design/$pdb/$lig/output
+                path=/home/sraman4/projects/biosensor_design/$pdb/$lig
+		homeDirVar=/home/sraman4
 		cat <<-EOFsh > ${path}/${fbname}_${k}.sh
 		#!/bin/bash
 
