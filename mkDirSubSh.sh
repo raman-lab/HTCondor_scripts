@@ -96,7 +96,7 @@ do
 		on_exit_remove = ExitCode =?= 0
 
 		# Put on hold if job returns without specified ouput files and release
-		periodic_release = (JobStatus == 5) && (HoldReasonCode == 13)
+		periodic_release = (JobStatus == 5) && (HoldReasonCode == 13 || HoldReasonCode == 12)
 
 		initialdir = ${path}/output
 		transfer_input_files = ${path}/$i, ${homeDirVar}/TFs/${protocol}.xml, ${homeDirVar}/TFs/${protocol}_flags, ${homeDirVar}/TFs/hack_elec.wts_patch, ${path}/LG.params, ${homeDirVar}/TFs/${pdb}_${k}.resfile, ${homeDirVar}/TFs/enzscore_flags, ${homeDirVar}/TFs/enzscore_1.xml, http://proxy.chtc.wisc.edu/SQUID/nwhoppe/database.tar.gz, http://proxy.chtc.wisc.edu/SQUID/nwhoppe/rosetta_scripts.static.linuxgccrelease, http://proxy.chtc.wisc.edu/SQUID/nwhoppe/revert_design_to_native.static.linuxgccrelease 
